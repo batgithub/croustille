@@ -1,0 +1,43 @@
+{
+	"name": "cantine-de-quartier",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "concurrently \"npm run watch:css\" \"npm run watch:js\"",
+		"watch:css": "npm-watch css",
+		"watch:js": "npm-watch js",
+		"css": "npm run build:css",
+		"js": "npm run build:js",
+		"build:css": "postcss src/css/main.css -o dist/css/main.min.css",
+		"build:js": "node scripts/build-js.js",
+		"build:images": "node scripts/generate-images.js",
+		"build": "npm run build:css && npm run build:js",
+		"deploy": "npm run build"
+	},
+	"watch": {
+		"css": {
+			"patterns": ["src/css"],
+			"extensions": "css",
+			"run": "npm run css",
+			"quiet": false
+		},
+		"js": {
+			"patterns": ["src/js"],
+			"extensions": "js",
+			"run": "npm run js",
+			"quiet": false
+		}
+	},
+	"devDependencies": {
+		"autoprefixer": "10.4.20",
+		"cssnano": "6.1.2",
+		"npm-watch": "0.11.0",
+		"postcss": "8.4.41",
+		"postcss-cli": "11.0.0",
+		"postcss-import": "16.1.0",
+		"postcss-nested": "6.2.0",
+		"concurrently": "^8.2.2",
+		"esbuild": "^0.19.0",
+		"sharp": "^0.33.0"
+	}
+}
+

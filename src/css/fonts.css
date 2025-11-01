@@ -1,0 +1,37 @@
+/**
+ * Déclarations @font-face pour les polices locales
+ */
+
+/* Mattone - Police de corps */
+@font-face {
+	font-family: 'Mattone';
+	src: url('/fonts/Mattone/Mattone-Regular.woff2') format('woff2'),
+		url('/fonts/Mattone/Mattone-Regular.woff') format('woff'),
+		url('/fonts/Mattone/Mattone-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Mattone';
+	src: url('/fonts/Mattone/Mattone-Bold.woff2') format('woff2'),
+		url('/fonts/Mattone/Mattone-Bold.woff') format('woff'),
+		url('/fonts/Mattone/Mattone-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+/* Darumadrop One - Police de titres */
+@font-face {
+	font-family: 'Darumadrop One';
+	src: url('/fonts/DarumadropOne/DarumadropOne-Regular.woff2') format('woff2'),
+		url('/fonts/DarumadropOne/DarumadropOne-Regular.woff') format('woff'),
+		url('/fonts/DarumadropOne/DarumadropOne-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+

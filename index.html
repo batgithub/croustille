@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cantine de quartier - Cuisine végétale faite maison à Toulouse</title>
+	<meta name="description" content="Restaurant végétalien à Toulouse. Cuisine faite maison avec des produits locaux. Ouvert du lundi au vendredi de 11h à 16h, sur place ou à emporter.">
+
+	<!-- Open Graph -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Cantine de quartier - Cuisine végétale faite maison">
+	<meta property="og:description" content="Restaurant végétalien à Toulouse. Cuisine faite maison avec des produits locaux.">
+	<meta property="og:image" content="https://croustille-cantine.fr/dist/images/og-image.jpg">
+	<meta property="og:url" content="https://croustille-cantine.fr/">
+	<meta property="og:locale" content="fr_FR">
+
+	<!-- Twitter Cards -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Cantine de quartier - Cuisine végétale faite maison">
+	<meta name="twitter:description" content="Restaurant végétalien à Toulouse. Cuisine faite maison avec des produits locaux.">
+	<meta name="twitter:image" content="https://croustille-cantine.fr/dist/images/og-image.jpg">
+
+	<!-- Schema.org LocalBusiness -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Restaurant",
+		"name": "Cantine de quartier",
+		"image": "https://croustille-cantine.fr/dist/images/og-image.jpg",
+		"description": "Restaurant végétalien à Toulouse. Cuisine faite maison avec des produits locaux.",
+		"servesCuisine": "Végétalienne",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "42 rue varsovie",
+			"addressLocality": "Toulouse",
+			"postalCode": "31300",
+			"addressCountry": "FR"
+		},
+		"openingHoursSpecification": [
+			{
+				"@type": "OpeningHoursSpecification",
+				"dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+				"opens": "11:00",
+				"closes": "16:00"
+			}
+		],
+		"priceRange": "€",
+		"telephone": "[NUMÉRO DE TÉLÉPHONE]",
+		"url": "https://croustille-cantine.fr/"
+	}
+	</script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="dist/css/main.min.css">
+</head>
+<body>
+	<!-- Header -->
+	<header class="header">
+		<div class="header__logo">
+			<svg class="header__logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+				<path d="M12 2L8 8h8l-4-6zM8 16l4 6 4-6H8z"/>
+			</svg>
+			<span>croustille</span>
+		</div>
+	</header>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<h1 class="hero__title">Cantine de quartier</h1>
+		<p class="hero__subtitle">Cuisine végétale faite maison avec des produits locaux</p>
+		
+		<div class="hero__info-box">
+			<p>De 11h à 16h</p>
+			<p>Du lundi au vendredi.</p>
+			<p>Sur place ou à emporter</p>
+		</div>
+
+		<a href="#menu" class="hero__cta">Voir la carte</a>
+
+		<div class="hero__decorative-icons" aria-hidden="true">
+			<svg class="hero__decorative-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+				<path d="M12 2l3 10h7l-6 5 2 7-6-5-6 5 2-7-6-5h7z"/>
+			</svg>
+			<svg class="hero__decorative-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+				<path d="M12 2l3 10h7l-6 5 2 7-6-5-6 5 2-7-6-5h7z"/>
+			</svg>
+			<svg class="hero__decorative-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+				<path d="M12 2l3 10h7l-6 5 2 7-6-5-6 5 2-7-6-5h7z"/>
+			</svg>
+		</div>
+	</section>
+
+	<!-- Carousel Section -->
+	<section class="carousel-section" id="menu">
+		<div class="carousel">
+			<div class="embla">
+				<div class="embla__container">
+					<div class="embla__slide">
+						<picture>
+							<source 
+								media="(min-width: 768px)"
+								srcset="
+									dist/images/marbre-400w.webp 400w,
+									dist/images/marbre-800w.webp 800w,
+									dist/images/marbre-1200w.webp 1200w
+								"
+								sizes="400px"
+							>
+							<source 
+								srcset="
+									dist/images/marbre-400w.webp 400w,
+									dist/images/marbre-800w.webp 800w
+								"
+								sizes="66vw"
+							>
+							<img 
+								src="dist/images/marbre-800w.webp" 
+								alt="Marbré chocolat vanille végane"
+								loading="lazy"
+								width="800"
+								height="1000"
+							>
+						</picture>
+					</div>
+					<!-- Répéter les slides selon le nombre de produits -->
+				</div>
+			</div>
+			<div class="carousel__caption">
+				<p>Marbré chocolat vanille végane</p>
+			</div>
+			<div class="carousel__navigation">
+				<button class="carousel__button carousel__button--prev" aria-label="Slide précédent">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M15 18l-6-6 6-6"/>
+					</svg>
+				</button>
+				<div class="carousel__dots">
+					<button class="carousel__dot carousel__dot--active" aria-label="Slide 1" aria-current="true"></button>
+					<button class="carousel__dot" aria-label="Slide 2"></button>
+					<button class="carousel__dot" aria-label="Slide 3"></button>
+					<button class="carousel__dot" aria-label="Slide 4"></button>
+				</div>
+				<button class="carousel__button carousel__button--next" aria-label="Slide suivant">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+						<path d="M9 18l6-6-6-6"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- About Section -->
+	<section class="about">
+		<h2 class="about__title">A propos</h2>
+		<div class="about__content">
+			<p>Après plus de 10 ans de travail dans la vente et la restauration j'ai lancé Croustille. L'occasion de rassembler mes passions la cuisine, l'évènementiel et chiner de la vaisselle 😊</p>
+		</div>
+		<div class="about__owner">
+			<svg class="about__owner-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+				<circle cx="12" cy="8" r="4"/>
+				<path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+			</svg>
+			<div class="about__owner-name">Amélie Moscariello</div>
+			<div class="about__owner-role">gérante de croustille</div>
+		</div>
+	</section>
+
+	<!-- Reviews Section -->
+	<section class="reviews">
+		<h2 class="reviews__title">Ce qu'en disent mes clients :)</h2>
+		<div class="reviews__summary">
+			<!-- Contenu généré par JavaScript -->
+		</div>
+		<div class="reviews__list">
+			<!-- Contenu généré par JavaScript -->
+		</div>
+	</section>
+
+	<!-- Reservation Section -->
+	<section class="reservation">
+		<h2 class="reservation__title">Réservation</h2>
+		<p class="reservation__description">Réservez votre table via le formulaire accessible ci-dessous.</p>
+		<button class="reservation__button">Formulaire de réservation</button>
+	</section>
+
+	<!-- Footer -->
+	<footer class="footer">
+		<div class="footer__content">
+			<address class="footer__address">
+				<div class="footer__address-line">Quartier Saint-cyprien</div>
+				<div class="footer__address-line">42 rue varsovie,</div>
+				<div class="footer__address-line">31300 Toulouse</div>
+			</address>
+			<div class="footer__social">
+				<a href="[URL_INSTAGRAM]" class="footer__social-link" aria-label="Instagram">
+					<svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+						<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+						<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+						<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+					</svg>
+				</a>
+				<a href="mailto:[EMAIL]" class="footer__social-link" aria-label="Email">
+					<svg class="footer__social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+						<polyline points="22,6 12,13 2,6"/>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<svg class="footer__decorative-fox" viewBox="0 0 200 200" fill="none" aria-hidden="true">
+			<!-- Illustration du renard décoratif -->
+			<circle cx="100" cy="100" r="80" fill="currentColor" opacity="0.3"/>
+		</svg>
+	</footer>
+
+	<!-- JavaScript -->
+	<script type="module" src="dist/js/main.min.js"></script>
+</body>
+</html>
+

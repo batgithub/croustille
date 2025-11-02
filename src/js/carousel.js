@@ -2,19 +2,44 @@
  * Configuration du carousel Embla
  */
 
-function initCarousel() {
+// Chargement dynamique du fichier UMD
+let EmblaCarousel;
+
+async function loadEmbla() {
+	if (EmblaCarousel) {
+		return EmblaCarousel;
+	}
+
+	// Charger le fichier UMD dynamiquement depuis dist/js
+	const script = document.createElement('script');
+	script.src = 'dist/js/embla-carousel.umd.js';
+	
+	return new Promise((resolve, reject) => {
+		script.onload = () => {
+			// Le fichier UMD expose EmblaCarousel globalement
+			EmblaCarousel = globalThis.EmblaCarousel || window.EmblaCarousel;
+			if (!EmblaCarousel) {
+				reject(new Error('EmblaCarousel n\'a pas été chargé correctement'));
+				return;
+			}
+			resolve(EmblaCarousel);
+		};
+		script.onerror = () => {
+			reject(new Error('Erreur lors du chargement d\'Embla Carousel'));
+		};
+		document.head.appendChild(script);
+	});
+}
+
+async function initCarousel() {
 	const emblaNode = document.querySelector('.embla');
 	if (!emblaNode) {
 		return;
 	}
 
-	function setupCarousel() {
-		const EmblaCarousel = window.EmblaCarousel;
-		if (!EmblaCarousel) {
-			return;
-		}
-
-		const embla = EmblaCarousel(emblaNode, {
+	try {
+		const EmblaCarouselLoader = await loadEmbla();
+		const embla = EmblaCarouselLoader(emblaNode, {
 			align: 'start',
 			loop: true,
 			slidesToScroll: 1
@@ -63,22 +88,9 @@ function initCarousel() {
 
 		updateDots();
 		updateButtons();
+	} catch (error) {
+		console.error('Erreur lors du chargement d\'Embla Carousel:', error);
 	}
-
-	// Vérifier si Embla est déjà chargé
-	if (window.EmblaCarousel) {
-		setupCarousel();
-		return;
-	}
-
-	// Charger Embla depuis CDN
-	const script = document.createElement('script');
-	script.src = 'https://cdn.jsdelivr.net/npm/embla-carousel@8.0.0/index.umd.min.js';
-	script.onload = setupCarousel;
-	script.onerror = () => {
-		console.error('Erreur lors du chargement d\'Embla Carousel');
-	};
-	document.head.appendChild(script);
 }
 
 export default initCarousel;

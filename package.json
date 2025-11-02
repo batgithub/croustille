@@ -7,7 +7,7 @@
 		"watch:js": "npm-watch js",
 		"css": "npm run build:css",
 		"js": "npm run build:js",
-		"build:css": "postcss src/css/main.css -o dist/css/main.min.css",
+		"build:css": "postcss src/css/0_main.css -o dist/css/main.min.css",
 		"build:js": "node scripts/build-js.js",
 		"build:images": "node scripts/generate-images.js",
 		"build": "npm run build:css && npm run build:js",

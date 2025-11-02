@@ -1,5 +1,6 @@
 const esbuild = require('esbuild');
 const path = require('path');
+const fs = require('fs');
 
 async function buildJS() {
 	const entryFile = path.join(__dirname, '../src/js/main.js');
@@ -21,8 +22,16 @@ async function buildJS() {
 
 		console.log(`✅ JavaScript bundlé et minifié : ${outputFile}`);
 		
+		// Copier le fichier Embla Carousel UMD dans dist/js
+		const emblaSource = path.join(__dirname, '../src/js/embla-carousel.umd.js');
+		const emblaDest = path.join(__dirname, '../dist/js/embla-carousel.umd.js');
+		
+		if (fs.existsSync(emblaSource)) {
+			fs.copyFileSync(emblaSource, emblaDest);
+			console.log(`✅ Fichier Embla Carousel copié : ${emblaDest}`);
+		}
+		
 		// Calculer la taille du fichier
-		const fs = require('fs');
 		const stats = fs.statSync(outputFile);
 		const sizeInKB = (stats.size / 1024).toFixed(2);
 		console.log(`📦 Taille : ${sizeInKB} KB`);

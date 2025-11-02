@@ -1,13 +1,10 @@
 /* CUBE CSS - Cascade */
-/* Variables */
+@import './0_reset.css';
 @import './0_variables.css';
-
-/* Fonts */
 @import './0_fonts.css';
 
 /* Composition - Layouts et structures */
 @import './1_composition.css';
-
-/* Utility - Classes réutilisables */
 @import './2_utilities.css';
+@import './3_blocks.css';
 

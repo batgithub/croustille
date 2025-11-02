@@ -1,0 +1,87 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+.button {
+	background-color: var(--dark-brown);
+	color: var(--light-beige);
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	text-decoration: none;
+}
+
+.color-invert .button {
+	background-color: var(--light-beige);
+	color: var(--dark-brown);
+}
+
+
+.embla__slide {
+	overflow: hidden;
+  border-radius: var(--radius-md);
+  img {
+    border-radius: var(--radius-sm);
+  }
+
+  figcaption {
+    padding: var(--spacing-sm) 0 var(--spacing-xs);
+  }
+}
+
+.profil {
+	display: flex;
+	flex-direction: column;
+  align-items: flex-end;
+
+  figure {
+    margin-bottom: var(--spacing-sm);
+    max-width: 4rem;
+  }
+}
+
+
+.reviews {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-sm);
+}
+
+
+
+footer {
+  --img-width: 20rem;
+  --position-right: -8rem;
+  overflow: hidden;
+  position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--spacing-sm);
+
+  @media (min-width: 768px) {
+    --img-width: 10rem;
+    --position-right: 0;
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: var(--spacing-sm);
+    
+    @media (min-width: 768px) {
+      width: calc(100% - var(--img-width));
+
+    }
+  }
+  figure {
+    right: var(--position-right);
+    position: absolute;
+    max-width: var(--img-width);
+  }
+}

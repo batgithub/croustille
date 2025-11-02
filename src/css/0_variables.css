@@ -9,6 +9,15 @@
 	--font-body: 'Mattone', sans-serif;
 	--font-heading: 'Darumadrop One', cursive;
 
+	--bg-primary: var(--light-beige);
+
+
+	/* Radius */
+	--radius-sm: 0.5rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
+	--radius-xl: 2rem;
+
 	/* Breakpoint */
 	--breakpoint-desktop: 768px;
 
@@ -18,5 +27,11 @@
 	--spacing-md: 2rem;
 	--spacing-lg: 3rem;
 	--spacing-xl: 4rem;
+
+	/* Gutter */
+	--gutter-base: 1rem;
+
+
+	--max-width-content: 80ch;
 }
 

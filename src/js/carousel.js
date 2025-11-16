@@ -45,19 +45,48 @@ async function initCarousel() {
 			slidesToScroll: 1
 		});
 
-		const dots = document.querySelectorAll('.carousel__dot');
+		const dotsNode = document.querySelector('.carousel__dots');
 		const prevButton = document.querySelector('.carousel__button--prev');
 		const nextButton = document.querySelector('.carousel__button--next');
 
-		const updateDots = () => {
-			const selectedIndex = embla.selectedScrollSnap();
-			dots.forEach((dot, index) => {
-				if (index === selectedIndex) {
-					dot.classList.add('carousel__dot--active');
-				} else {
-					dot.classList.remove('carousel__dot--active');
-				}
+		let dotNodes = [];
+
+		// Fonction pour générer automatiquement les dots
+		const addDotBtnsWithClickHandlers = () => {
+			if (!dotsNode) {
+				return;
+			}
+
+			dotsNode.innerHTML = embla
+				.scrollSnapList()
+				.map((_, index) => `<button class="carousel__dot" type="button" aria-label="Aller à la slide ${index + 1}"></button>`)
+				.join('');
+
+			const scrollTo = (index) => {
+				embla.scrollTo(index);
+			};
+
+			dotNodes = Array.from(dotsNode.querySelectorAll('.carousel__dot'));
+			dotNodes.forEach((dotNode, index) => {
+				dotNode.addEventListener('click', () => scrollTo(index), false);
 			});
+		};
+
+		// Fonction pour mettre à jour l'état actif des dots
+		const toggleDotBtnsActive = () => {
+			if (dotNodes.length === 0) {
+				return;
+			}
+
+			const previous = embla.previousScrollSnap();
+			const selected = embla.selectedScrollSnap();
+
+			if (dotNodes[previous]) {
+				dotNodes[previous].classList.remove('carousel__dot--active');
+			}
+			if (dotNodes[selected]) {
+				dotNodes[selected].classList.add('carousel__dot--active');
+			}
 		};
 
 		const updateButtons = () => {
@@ -69,10 +98,16 @@ async function initCarousel() {
 			}
 		};
 
-		embla.on('select', () => {
-			updateDots();
-			updateButtons();
-		});
+		// Initialisation des dots
+		embla
+			.on('init', addDotBtnsWithClickHandlers)
+			.on('reInit', addDotBtnsWithClickHandlers)
+			.on('init', toggleDotBtnsActive)
+			.on('reInit', toggleDotBtnsActive)
+			.on('select', () => {
+				toggleDotBtnsActive();
+				updateButtons();
+			});
 
 		if (prevButton) {
 			prevButton.addEventListener('click', () => embla.scrollPrev());
@@ -82,11 +117,7 @@ async function initCarousel() {
 			nextButton.addEventListener('click', () => embla.scrollNext());
 		}
 
-		dots.forEach((dot, index) => {
-			dot.addEventListener('click', () => embla.scrollTo(index));
-		});
-
-		updateDots();
+		// Initialisation initiale
 		updateButtons();
 	} catch (error) {
 		console.error('Erreur lors du chargement d\'Embla Carousel:', error);

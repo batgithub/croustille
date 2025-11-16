@@ -1,7 +1,11 @@
+/* ==========================================================================
+   Color Utilities
+   ========================================================================== */
 .color-invert { 
   color: var(--light-beige);
 }
 
+/* Background colors */
 .bg-primary {
 	background-color: var(--light-beige);
 }
@@ -22,50 +26,79 @@
 	background-color: var(--dark-brown);
 }
 
+/* Borders & Radius */
 .border-primary {
 	border: 2px solid var(--dark-brown);
   border-radius: var(--radius-sm);
 }
+
 .radius-sm {
 	border-radius: var(--radius-sm);
   overflow: hidden;
 }
 
+/* ==========================================================================
+   Spacing Utilities
+   ========================================================================== */
 
+/* Flow spacing between children */
 .flow-base > * + * {
 	margin-top: var(--spacing-sm);
+}
 
-}
+/* Section vertical padding */
 .py-section {
-	padding-top: var(--spacing-md);
-	padding-bottom: var(--spacing-md);
+	padding-top: var(--spacing-lg);
+	padding-bottom: var(--spacing-lg);
 }
+
+/* Padding helpers */
 .p-sm {
 	padding: var(--spacing-xs);
 }
-
 .p-md {
 	padding: var(--spacing-sm);
 }
-
 .p-lg {
 	padding: var(--spacing-md);
 }
+.px-gutter {
+	padding-inline: var(--gutter-base);
+}
 
+/* Gap helpers for flex/grid */
 .gap-sm {
 	gap: var(--spacing-xs);
 }
-
 .gap-md {
 	gap: var(--spacing-sm);
 }
-
 .gap-lg {
 	gap: var(--spacing-md);
 }
 
+/* ==========================================================================
+   Layout Utilities
+   ========================================================================== */
 
+/* Flex wrap utility */
 .flex-wrap {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+/* Overflow helper */
+.overflow-hidden {
+	overflow: hidden;
+}
+
+/* Max width helper */
+.max-w {
+	--max-width: 50ch;
+	max-width: var(--max-width);
+}
+
+/* Self alignment */
+.align-self-end {
+	align-self: flex-end;
 }

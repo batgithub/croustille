@@ -85,3 +85,46 @@ footer {
     max-width: var(--img-width);
   }
 }
+
+
+/* 
+ * Carousel
+ */
+
+.embla {
+  padding-left: var(--gutter-base);
+  .embla__container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc(100% - var(--gutter-base) * 2); /* Each slide covers 80% of the viewport */
+
+    @media (min-width: 768px) {
+      grid-auto-columns: calc(25%); /* Each slide covers 80% of the viewport */
+    }
+
+    .embla__slide {
+      margin-inline-end: var(--gutter-base); 
+      
+    }
+  }
+}
+.carousel__navigation {
+
+  .carousel__dots {
+    display: flex;
+    gap: var(--spacing-xs);
+    padding-inline: var(--gutter-base);
+    .carousel__dot {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: var(--light-beige);
+      border: 2px solid var(--dark-brown);
+      cursor: pointer;
+    }
+    .carousel__dot--active {
+      background-color: var(--light-orange-1);
+    }
+  }
+
+}

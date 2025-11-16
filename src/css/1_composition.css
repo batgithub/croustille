@@ -17,8 +17,11 @@
 }
 
 .layout-2cols {
+  --gap: var(--gutter-base);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -27,7 +30,6 @@
 
 .layout-2cols > * {
   display: grid;
-  padding: var(--spacing-lg) var(--gutter-base);
 }
 
 .layout-2cols >  *:first-child {

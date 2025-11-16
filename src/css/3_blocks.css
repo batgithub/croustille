@@ -1,6 +1,24 @@
+:root {
+  --carousel-section-padding-top: 8rem;
+}
+header {
+  padding-top: var(--spacing-lg);
+  padding-bottom: var(--carousel-section-padding-top);
+}
+
+.carousel-section .carousel {
+  margin-top: calc(var(--carousel-section-padding-top) * -1);
+}
+
 img {
   width: 100%;
   height: auto;
+}
+
+.img-legumes {
+	max-width: 12rem;
+  margin-top: -4rem;
+
 }
 
 
@@ -10,6 +28,7 @@ img {
 	padding: 1rem 2rem;
 	border-radius: 0.5rem;
 	text-decoration: none;
+  display: inline-block;
 }
 
 .color-invert .button {
@@ -68,15 +87,18 @@ footer {
 
   .content {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+ 
     justify-content: space-between;
     width: 100%;
     gap: var(--spacing-sm);
+
     
     @media (min-width: 768px) {
       width: calc(100% - var(--img-width));
-
+      align-items: center;
+      flex-direction: row;
     }
   }
   figure {
@@ -86,6 +108,22 @@ footer {
   }
 }
 
+
+/* stars */
+
+.stars {
+	display: flex;
+	gap: var(--spacing-xs);
+}
+.icon-star {
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.reviews__rating-value {
+	font-size: 2rem;
+  margin-bottom: 0.4rem;
+}
 
 /* 
  * Carousel

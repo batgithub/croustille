@@ -5,6 +5,10 @@
   color: var(--light-beige);
 }
 
+.color-text-2 {
+  color: var(--dark-brown-2);
+}
+
 /* Background colors */
 .bg-primary {
 	background-color: var(--light-beige);
@@ -87,6 +91,15 @@
 	flex-wrap: wrap;
 }
 
+
+.align-items-center {
+	align-items: center;
+}
+
+.align-items-end {
+	align-items: flex-end;
+}
+
 /* Overflow helper */
 .overflow-hidden {
 	overflow: hidden;
@@ -101,4 +114,35 @@
 /* Self alignment */
 .align-self-end {
 	align-self: flex-end;
+}
+
+
+.ff-heading {
+	font-family: var(--font-heading);
+}
+
+
+.text-center {
+	text-align: center;
+}
+
+.flex-col-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.overflow-x-hidden {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.z-10 {
+	z-index: 10;
+}
+
+.z-20 {
+	z-index: 20;
 }

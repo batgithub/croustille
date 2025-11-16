@@ -1,5 +1,4 @@
 node_modules/
-dist/
 cache/*.json
 config.php
 .env

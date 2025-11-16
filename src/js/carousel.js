@@ -41,7 +41,6 @@ async function initCarousel() {
 		const EmblaCarouselLoader = await loadEmbla();
 		const embla = EmblaCarouselLoader(emblaNode, {
 			align: 'start',
-			loop: true,
 			slidesToScroll: 1
 		});
 

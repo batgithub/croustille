@@ -30,9 +30,9 @@
 	--spacing-xl: 4rem;
 
 	/* Gutter */
-	--gutter-base: 1rem;
+	--gutter-base: clamp(1rem, 0.2941rem + 1.8824vw, 2rem);
 
 
-	--max-width-content: 80ch;
+	--max-width-content: 70ch;
 }
 

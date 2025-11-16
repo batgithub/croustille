@@ -65,13 +65,6 @@ Modifier les variables dans `src/css/variables.css` :
 }
 ```
 
-### Polices
-
-Les polices sont chargées depuis Google Fonts dans `index.html`. Pour utiliser des fichiers locaux :
-
-1. Placer les fichiers dans `fonts/Mattone/` et `fonts/DarumadropOne/`
-2. Ajouter les `@font-face` dans `src/css/base.css`
-3. Supprimer les liens Google Fonts de `index.html`
 
 ## 📦 Build
 

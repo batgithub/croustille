@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Color Utilities
+   ========================================================================== */
+.color-invert { 
+  color: var(--light-beige);
+}
+
+.color-text-2 {
+  color: var(--dark-brown-2);
+}
+
+/* Background colors */
+.bg-primary {
+	background-color: var(--light-beige);
+}
+
+.bg-white {
+	background-color: white;
+}
+
+.bg-light-orange-1 {
+	background-color: var(--light-orange-1);
+}
+
+.bg-light-orange-2 {
+	background-color: var(--light-orange-2);
+}
+
+.bg-dark-brown {
+	background-color: var(--dark-brown);
+}
+
+/* Borders & Radius */
+.border-primary {
+	border: 2px solid var(--dark-brown);
+  border-radius: var(--radius-sm);
+}
+
+.radius-sm {
+	border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Spacing Utilities
+   ========================================================================== */
+
+/* Flow spacing between children */
+.flow-base > * + * {
+	margin-top: var(--spacing-sm);
+}
+
+/* Section vertical padding */
+.py-section {
+	padding-top: var(--spacing-lg);
+	padding-bottom: var(--spacing-lg);
+}
+
+/* Padding helpers */
+.p-sm {
+	padding: var(--spacing-xs);
+}
+.p-md {
+	padding: var(--spacing-sm);
+}
+.p-lg {
+	padding: var(--spacing-md);
+}
+.px-gutter {
+	padding-inline: var(--gutter-base);
+}
+
+/* Gap helpers for flex/grid */
+.gap-sm {
+	gap: var(--spacing-xs);
+}
+.gap-md {
+	gap: var(--spacing-sm);
+}
+.gap-lg {
+	gap: var(--spacing-md);
+}
+
+/* ==========================================================================
+   Layout Utilities
+   ========================================================================== */
+
+/* Flex wrap utility */
+.flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+.align-items-center {
+	align-items: center;
+}
+
+.align-items-end {
+	align-items: flex-end;
+}
+
+/* Overflow helper */
+.overflow-hidden {
+	overflow: hidden;
+}
+
+/* Max width helper */
+.max-w {
+	--max-width: 50ch;
+	max-width: var(--max-width);
+}
+
+/* Self alignment */
+.align-self-end {
+	align-self: flex-end;
+}
+
+
+.ff-heading {
+	font-family: var(--font-heading);
+}
+
+
+.text-center {
+	text-align: center;
+}
+
+.flex-col-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.overflow-x-hidden {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.z-10 {
+	z-index: 10;
+}
+
+.z-20 {
+	z-index: 20;
+}

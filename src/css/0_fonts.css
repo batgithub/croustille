@@ -1,0 +1,62 @@
+/**
+ * Déclarations @font-face pour les polices locales
+ */
+
+/* Mattone - Police de corps */
+@font-face {
+	font-family: 'Mattone';
+	src: url('/fonts/Mattone/Mattone-Regular.woff2') format('woff2'),
+		url('/fonts/Mattone/Mattone-Regular.woff') format('woff'),
+		url('/fonts/Mattone/Mattone-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Mattone';
+	src: url('/fonts/Mattone/Mattone-Bold.woff2') format('woff2'),
+		url('/fonts/Mattone/Mattone-Bold.woff') format('woff'),
+		url('/fonts/Mattone/Mattone-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+/* Darumadrop One - Police de titres */
+@font-face {
+	font-family: 'Darumadrop One';
+	src: url('/fonts/DarumadropOne/DarumadropOne-Regular.woff2') format('woff2'),
+		url('/fonts/DarumadropOne/DarumadropOne-Regular.woff') format('woff'),
+		url('/fonts/DarumadropOne/DarumadropOne-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+html {
+	font-family: var(--font-body);
+	color: var(--dark-brown);
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--font-heading);
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: clamp(1.75rem, 0.6912rem + 2.8235vw, 3.25rem);
+}
+
+h2 {
+	font-size: clamp(1.75rem, 1.2206rem + 1.4118vw, 2.5rem);
+}
+
+p {
+	font-family: var(--font-body);
+	font-size: clamp(1rem, 0.9118rem + 0.2353vw, 1.125rem);
+  line-height: 1.5;
+}

@@ -1,0 +1,38 @@
+:root {
+	/* Couleurs */
+	--dark-brown: #5E1D0B;
+	--dark-brown-2: #936354;
+	--light-beige: #FEF0E9;
+	--light-orange-1: #ED805B;
+	--light-orange-2: #FFD2BF;
+
+	/* Typographie */
+	--font-body: 'Mattone', sans-serif;
+	--font-heading: 'Darumadrop One', cursive;
+
+	--bg-primary: var(--light-beige);
+
+
+	/* Radius */
+	--radius-sm: 0.5rem;
+	--radius-md: 1rem;
+	--radius-lg: 1.5rem;
+	--radius-xl: 2rem;
+
+	/* Breakpoint */
+	--breakpoint-desktop: 768px;
+
+	/* Espacements */
+	--spacing-xs: 0.5rem;
+	--spacing-sm: 1rem;
+	--spacing-md: 2rem;
+	--spacing-lg: 3rem;
+	--spacing-xl: 4rem;
+
+	/* Gutter */
+	--gutter-base: clamp(1rem, 0.2941rem + 1.8824vw, 2rem);
+
+
+	--max-width-content: 70ch;
+}
+

@@ -1,0 +1,47 @@
+/* Layout content - version avec une seule zone principale "main" */
+.layout-content {
+  --zone: main;
+  --gap: var(--gutter-base, 1rem);
+  --main: min(var(--max-width-content), 100% - var(--gap) * 2);
+  --justify: start;
+  display: grid;
+  grid-template-columns:
+    [main-start] var(--main) [main-end];
+  justify-content: center;
+}
+
+.layout-content > * {
+  grid-column: var(--zone);
+  justify-self: var(--justify);
+  text-align: var(--justify);
+}
+
+.layout-2cols {
+  --gap: var(--gutter-base);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+
+
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.layout-2cols > * {
+  display: grid;
+}
+
+.layout-2cols >  *:first-child {
+  grid-template-columns:1fr [main-start] min(calc(var(--max-width-content) / 2 - var(--gutter-base)), 100%) [main-end] ;
+}
+
+.layout-2cols > *:last-child {
+  grid-template-columns:[main-start] min(calc(var(--max-width-content) / 2 - var(--gutter-base)), 100%) [main-end] 1fr;
+}
+
+.layout-2cols > * > * {
+  grid-column: main;
+  justify-self: flex-start;
+}

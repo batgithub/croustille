@@ -152,6 +152,7 @@ footer {
     display: flex;
     gap: var(--spacing-xs);
     padding-inline: var(--gutter-base);
+    justify-content: center;
     .carousel__dot {
       width: 1rem;
       height: 1rem;

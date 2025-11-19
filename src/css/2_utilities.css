@@ -49,6 +49,13 @@
 .flow-base > * + * {
 	margin-top: var(--spacing-sm);
 }
+.flow-md > * + * {
+	margin-top: var(--spacing-md);
+}
+
+.flow-xs > * + * {
+	margin-top: var(--spacing-xs);
+}
 
 /* Section vertical padding */
 .py-section {
@@ -109,6 +116,10 @@
 .max-w {
 	--max-width: 50ch;
 	max-width: var(--max-width);
+}
+
+.w-full {
+	width: 100%;
 }
 
 /* Self alignment */
